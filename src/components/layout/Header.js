@@ -7,7 +7,7 @@ import AuthorizeBox from '@/components/modules/layout/header/AuthorizeBox';
 const Header = () => {
   return (
     <nav className="bg-white border-gray-200 flex justify-between items-center">
-      <div className=" flex flex-wrap items-center gap-8 p-4">
+      <div className=" flex flex-wrap items-center gap-8 p-4 pr-0">
         <Logo />
         <SearchBox />
       </div>

@@ -1,6 +1,7 @@
 import '@/assets/globals.css';
 import { iranYekan } from '@/assets/fonts';
 import Header from '@/components/layout/Header';
+import Sidebar from '@/components/layout/Sidebar';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="rtl" className={iranYekan.className}>
       <body className="max-w-screen-xl mx-auto">
         <Header />
-        {children}
+        <div className="grid grid-cols-5 gap-2 mt-8">
+          <Sidebar />
+          <main className="col-span-4">{children}</main>
+        </div>
       </body>
     </html>
   );
