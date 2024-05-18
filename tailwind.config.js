@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         iranyekan: ['var(--font-iranyekan)'],
+        cazablanca: ['var(--font-cazablanca)'],
       },
     },
   },

@@ -1,5 +1,6 @@
 import '@/assets/globals.css';
 import { iranYekan } from '@/assets/fonts';
+import Header from '@/components/layout/Header';
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" dir="rtl" className={iranYekan.className}>
-      <body>{children}</body>
+      <body className="max-w-screen-xl mx-auto">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

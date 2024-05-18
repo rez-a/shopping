@@ -42,4 +42,10 @@ const iranYekan = localFont({
   display: 'swap',
 });
 
-export { iranYekan };
+const cazablanca = localFont({
+  src: '../../public/fonts/cazablanca/Far_Casablanca.ttf',
+  variable: '--font-cazablanca',
+  display: 'swap',
+});
+
+export { iranYekan, cazablanca };
