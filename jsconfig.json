@@ -4,7 +4,9 @@
     "paths": {
       "@/assets/*": ["src/assets/*"],
       "@/components/*": ["src/components/*"],
-      "@/components/modules/*": ["src/components/modules/*"]
+      "@/components/modules/*": ["src/components/modules/*"],
+      "@/components/templates/*": ["src/components/templates/*"],
+      "@/components/shared/*": ["src/components/shared/*"]
     }
   }
 }

@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en" dir="rtl" className={iranYekan.className}>
       <body className="max-w-screen-xl mx-auto">
         <Header />
-        <div className="grid grid-cols-5 gap-2 mt-8">
+        <div className="grid grid-cols-5 gap-8 mt-8 relative">
           <Sidebar />
           <main className="col-span-4">{children}</main>
         </div>
