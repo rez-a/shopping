@@ -2,7 +2,7 @@
 import { useParams, usePathname } from 'next/navigation';
 import React from 'react';
 
-const Navbar = () => {
+const Title = () => {
   const { categorySlug } = useParams();
   const pathname = usePathname();
 
@@ -25,25 +25,21 @@ const Navbar = () => {
       slug: 'inspiration',
     },
   ];
-
   const category = categorySlug
     ? categories.find((category) => category.slug === categorySlug)
     : categories.at(0);
-
   return (
-    <nav>
-      <h1 className="text-3xl font-bold flex items-center gap-1 mb-8">
-        {pathname.endsWith('categories') ? (
-          <p>همه محصولات</p>
-        ) : (
-          <>
-            <p>{category.icon}</p>
-            <p>{category.title}</p>
-          </>
-        )}
-      </h1>
-    </nav>
+    <h1 className="text-3xl font-bold flex items-center gap-1">
+      {pathname.endsWith('categories') ? (
+        <p>همه محصولات</p>
+      ) : (
+        <>
+          <p>{category.icon}</p>
+          <p>{category.title}</p>
+        </>
+      )}
+    </h1>
   );
 };
 
-export default Navbar;
+export default Title;

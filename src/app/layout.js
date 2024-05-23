@@ -2,7 +2,7 @@ import '@/assets/globals.css';
 import { iranYekan } from '@/assets/fonts';
 import Header from '@/components/layout/Header';
 import Sidebar from '@/components/layout/Sidebar';
-import Navbar from '@/components/modules/layout/Navbar';
+import Navbar from '@/components/modules/layout/navbar/Navbar';
 
 export const metadata = {
   title: 'Create Next App',
@@ -18,9 +18,7 @@ export default function RootLayout({ children }) {
           <Sidebar />
           <main className="col-span-4">
             <Navbar />
-            <section className="grid grid-cols-4 grid-rows-6 gap-4 mb-4">
-              {children}
-            </section>
+            {children}
           </main>
         </div>
       </body>

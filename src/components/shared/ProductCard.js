@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const ProductCard = () => {
   return (
-    <article className="col-span-1 row-span-2 bg-neutral-100 rounded-lg p-4 relative shadow-none hover:shadow-lg transition duration-300 group">
+    <article className="bg-neutral-100 rounded-lg p-4 relative shadow-none hover:shadow-lg transition duration-300 group">
       <div className=" h-52 overflow-hidden">
         <Image
           src={productPic}
