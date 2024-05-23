@@ -3,7 +3,7 @@ import Categories from '@/components/modules/layout/sidebar/Categories';
 
 const Sidebar = () => {
   return (
-    <aside className="col-span-1 sticky top-0">
+    <aside className="col-span-1 sticky top-4 h-fit">
       <h2 className="font-bold text-lg mb-6">دسته بندی</h2>
       <Categories />
     </aside>

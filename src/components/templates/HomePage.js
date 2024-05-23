@@ -4,7 +4,7 @@ import BannerCard from '@/components/modules/home/BannerCard';
 
 const HomePage = () => {
   return (
-    <section className="grid grid-cols-4 grid-rows-6 gap-4 mb-4">
+    <>
       <ProductCard />
       <ProductCard />
       <BannerCard bg="bg-sky-200" />
@@ -17,7 +17,7 @@ const HomePage = () => {
       <ProductCard />
       <BannerCard bg="bg-green-300" />
       <BannerCard bg="bg-orange-200" />
-    </section>
+    </>
   );
 };
 
