@@ -1,7 +1,10 @@
+'use client';
 import React from 'react';
 import Query from './Query';
+import { usePathname } from 'next/navigation';
 
 const Queries = () => {
+  const pathname = usePathname();
   const queries = [
     {
       id: 1,
@@ -30,12 +33,14 @@ const Queries = () => {
   ];
   return (
     <div className="flex items-center">
-      <ul className="flex items-center gap-1">
-        {queries.map((query) => (
-          <Query key={query.id} {...query} />
-        ))}
-      </ul>
-      <div class="text-white bg-gray-800 font-medium rounded-lg text-xs px-5 py-2.5 mr-1 border border-gray-800">
+      {pathname !== '/' && (
+        <ul className="flex items-center gap-1">
+          {queries.map((query) => (
+            <Query key={query.id} {...query} />
+          ))}
+        </ul>
+      )}
+      <div className="text-white bg-gray-800 font-medium rounded-lg text-xs px-5 py-2.5 mr-1 border border-gray-800">
         <span className="ml-1">محصولات موجود :</span>
         <span>34</span>
       </div>
