@@ -1,6 +1,6 @@
 import React from 'react';
-import Title from './Title';
-import Queries from './queries/Queries';
+import Title from '@/components/modules/layout/navbar/Title';
+import Queries from '@/components/modules/layout/navbar/queries/Queries';
 
 const Navbar = () => {
   return (
