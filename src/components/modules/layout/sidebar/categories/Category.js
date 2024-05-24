@@ -2,24 +2,27 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Brands from '@/components/modules/layout/sidebar/brands/Brands';
 
-const Category = ({ id, slug, icon, title }) => {
+const Category = ({ id, slug, icon, title, brands }) => {
   const path = usePathname();
-  const BASE_ROUTE = 'categories';
-  const categoryHref =
-    slug === 'new-in' ? '/' : `/${BASE_ROUTE}/${slug}`;
+  const categoryHref = slug === 'new-in' ? '/' : `/${slug}`;
+  const categoryActive = path === categoryHref;
 
   return (
     <li key={id}>
       <Link
         href={categoryHref}
         className={`hover:bg-neutral-100/60 w-full h-full block py-5 px-4 rounded  ${
-          path === categoryHref && 'bg-neutral-100/60'
+          categoryActive && 'bg-neutral-100/60'
         }`}
       >
         <span>{icon}</span>
         <span className="mr-2">{title}</span>
       </Link>
+      {!!brands.length && categoryActive && (
+        <Brands brands={brands} categoryIcon={icon} />
+      )}
     </li>
   );
 };
