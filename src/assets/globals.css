@@ -9,3 +9,11 @@
     @apply font-iranyekan;
   }
 }
+
+@layer components {
+  .secondary-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme('backgroundColor.neutral.100')
+      theme('backgroundColor.white');
+  }
+}

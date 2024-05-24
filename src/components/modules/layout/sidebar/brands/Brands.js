@@ -1,11 +1,11 @@
 import React from 'react';
 import Brand from './Brand';
 
-const Brands = ({ brands, categoryIcon }) => {
+const Brands = ({ brands, category }) => {
   return (
-    <ul>
+    <ul className="max-h-40 overflow-y-scroll secondary-scrollbar">
       {brands.map((brand) => (
-        <Brand {...brand} categoryIcon={categoryIcon} />
+        <Brand key={brand.id} {...brand} category={category} />
       ))}
     </ul>
   );

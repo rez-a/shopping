@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const Brand = ({ categoryIcon, brandTitle, brandSlug }) => {
+const Brand = ({ category, brandTitle, brandSlug }) => {
   const path = usePathname();
-  const brandHref = `${path}/${brandSlug}`;
-  const brandActive = path === brandHref;
+  const brandHref = `/${category.slug}/${brandSlug}`;
+  const brandActive = path.includes(brandSlug);
+
   return (
     <li className="pr-8 ">
       <Link
@@ -15,7 +16,7 @@ const Brand = ({ categoryIcon, brandTitle, brandSlug }) => {
         }`}
       >
         <p>
-          <span>{categoryIcon}</span>
+          <span>{category.icon}</span>
           <span className="mr-2">{brandTitle}</span>
         </p>
         <svg

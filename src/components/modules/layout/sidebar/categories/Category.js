@@ -7,7 +7,7 @@ import Brands from '@/components/modules/layout/sidebar/brands/Brands';
 const Category = ({ id, slug, icon, title, brands }) => {
   const path = usePathname();
   const categoryHref = slug === 'new-in' ? '/' : `/${slug}`;
-  const categoryActive = path === categoryHref;
+  const categoryActive = path.includes(slug);
 
   return (
     <li key={id}>
@@ -21,7 +21,7 @@ const Category = ({ id, slug, icon, title, brands }) => {
         <span className="mr-2">{title}</span>
       </Link>
       {!!brands.length && categoryActive && (
-        <Brands brands={brands} categoryIcon={icon} />
+        <Brands brands={brands} category={{ icon, slug }} />
       )}
     </li>
   );

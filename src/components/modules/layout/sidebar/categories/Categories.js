@@ -17,8 +17,8 @@ const Categories = () => {
       slug: 'clothing',
       brands: [
         { id: 1, brandTitle: 'آدیداس', brandSlug: 'adidas' },
-        { id: 1, brandTitle: 'نایک', brandSlug: 'nike' },
-        { id: 1, brandTitle: 'پوما', brandSlug: 'puma' },
+        { id: 2, brandTitle: 'نایک', brandSlug: 'nike' },
+        { id: 3, brandTitle: 'پوما', brandSlug: 'puma' },
       ],
     },
     {
@@ -28,8 +28,8 @@ const Categories = () => {
       slug: 'shoes',
       brands: [
         { id: 1, brandTitle: 'آدیداس', brandSlug: 'adidas' },
-        { id: 1, brandTitle: 'نایک', brandSlug: 'nike' },
-        { id: 1, brandTitle: 'پوما', brandSlug: 'puma' },
+        { id: 2, brandTitle: 'نایک', brandSlug: 'nike' },
+        { id: 3, brandTitle: 'پوما', brandSlug: 'puma' },
       ],
     },
     {
@@ -46,8 +46,8 @@ const Categories = () => {
       slug: 'activewear',
       brands: [
         { id: 1, brandTitle: 'آدیداس', brandSlug: 'adidas' },
-        { id: 1, brandTitle: 'نایک', brandSlug: 'nike' },
-        { id: 1, brandTitle: 'پوما', brandSlug: 'puma' },
+        { id: 2, brandTitle: 'نایک', brandSlug: 'nike' },
+        { id: 3, brandTitle: 'پوما', brandSlug: 'puma' },
       ],
     },
     { id: 6, title: 'گیفت', icon: '🎁', slug: 'gifts', brands: [] },
