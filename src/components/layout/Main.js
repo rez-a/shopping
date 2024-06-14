@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Navbar from './Navbar';
-import useCheckProductPage from '@/hooks/useCheckProductPage';
+import useCheckShouldBeNavbar from '@/hooks/useCheckShouldBeNavbar';
 import Breadcrumb from '@/components/modules/breadcrumb/Breadcrumb';
 
 const Main = ({ children }) => {
-  const isProductPage = useCheckProductPage();
+  const isShouldBe = useCheckShouldBeNavbar();
 
   return (
     <main className={'col-span-4'}>
-      {!isProductPage ? <Navbar /> : <Breadcrumb />}
+      {!isShouldBe ? <Navbar /> : <Breadcrumb />}
       {children}
     </main>
   );

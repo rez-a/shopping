@@ -2,7 +2,7 @@
 import { useParams, usePathname } from 'next/navigation';
 import React from 'react';
 
-const Title = () => {
+const Title = ({ page }) => {
   const { categorySlug } = useParams();
   const pathname = usePathname();
 
@@ -32,6 +32,8 @@ const Title = () => {
     <h1 className="text-3xl font-bold flex items-center gap-1">
       {pathname.endsWith('categories') ? (
         <p>همه محصولات</p>
+      ) : !!page ? (
+        <p>{page.title}</p>
       ) : (
         <>
           <p>{category.icon}</p>
