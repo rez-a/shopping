@@ -11,7 +11,7 @@ const BreadcrumbItem = ({ slug, path }) => {
           href="#"
           className="ms-1 text-xs font-medium text-neutral-400 hover:text-neutral-600  "
         >
-          Projects
+          تست
         </Link>
       </div>
     </li>

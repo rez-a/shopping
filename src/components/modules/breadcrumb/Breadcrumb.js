@@ -2,15 +2,8 @@
 import Link from 'next/link';
 import React from 'react';
 import BreadcrumbItem from './BreadcrumbItem';
-import { usePathname } from 'next/navigation';
-import slugify from '@/utils/slugify';
-import categories from 'src/categories';
 
 const Breadcrumb = () => {
-  const path = usePathname();
-  const allPaths = slugify(path);
-  console.log(allPaths);
-
   return (
     <nav className="flex mb-4">
       <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -30,10 +23,9 @@ const Breadcrumb = () => {
             صفحه اصلی
           </Link>
         </li>
-        {!!allPaths.length &&
-          allPaths.map((path, i) => (
-            <BreadcrumbItem key={i} {...path} />
-          ))}
+        <BreadcrumbItem />
+        <BreadcrumbItem />
+        <BreadcrumbItem />
       </ol>
     </nav>
   );

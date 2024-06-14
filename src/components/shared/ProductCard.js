@@ -28,7 +28,7 @@ const ProductCard = () => {
         </p>
       </div>
       <Link
-        href="/"
+        href="/clothing/nike/hugo-boss-leather-jacket"
         className="absolute w-full h-full left-0 top-0"
       />
       <p className="absolute right-4 top-4 bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded  border border-red-400">
